@@ -6,9 +6,11 @@
   <% @users.each do |user| %>
     <%= render user %>
     <p>
-      <%= link_to "Show this user", user %>
+      <%= link_to "Ver Tweet", user %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<div class="mt-4">
+<%==pagy_bootstrap_nav(@pagy)%>
+</div>
