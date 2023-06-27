@@ -1,0 +1,22 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-y: scroll;
+    overscroll-behavior-y: none;
+  }
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.footer_aside{
+    display:contents;
+}
+
+.icono_twitter{
+    color: rgb(29, 155, 240);
+}
+
+

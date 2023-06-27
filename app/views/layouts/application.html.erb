@@ -5,12 +5,54 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <!-- Se agrega CDN CSS Bootstrap 5.3.0 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Se agrega CDN de Font Awesome 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container ms-5 ps-5">
+        <a class="navbar-brand ms-5" href="/"><h2>Explorar</h2></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href=""><i class="fa-solid fa-gear fa-2x"></i></a>
+            </li>
+          </ul>
+          <form class="d-flex d-lg-none" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row wrapper d-flex align-items-stretch">
+    <aside class="col-2 footer_aside me-0">
+      <footer class=" me-0 mt-5">
+        <div class="sticky-top mt-5 pt-5">
+        <p class="mb-4 ms-5 mt-4"><i class="fa-brands fa-twitter fa-3x icono_twitter"></i></p>
+        <p class="mb-4 ms-5"><i class="fa-solid fa-magnifying-glass fa-3x"></i></p>
+        <p class="mb-4 ms-5"><i class="fa-solid fa-gear fa-3x"></i></p>
+      </div>
+      </footer>
+    </aside>
+   
+
+    <div class="col-10 container border border-light-subtle mx-auto">
+      <%= yield %>
+    </div>
+  </div>
+
+    <!-- Se agrega CDN JS Bootstrap 5.3.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

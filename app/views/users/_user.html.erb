@@ -1,12 +1,18 @@
 <div id="<%= dom_id user %>">
-  <p>
-    <strong>Description:</strong>
-    <%= user.description %>
-  </p>
-
-  <p>
-    <strong>Username:</strong>
-    <%= user.username %>
-  </p>
+  <hr class="mt-5">
+  <div class="card mb-3 border border-white" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-1">
+        <%= image_tag 'imgperfil.png', class: 'img-fluid rounded-start ms-4 mt-3', size:'40x40'%>
+      </div>
+      <div class="col-md-11 ps-3">
+        <div class="card-body">
+          <h5 class="card-title"><%= user.username %><span class="fs-6 fw-light text-center ms-5">@username -19h</span></h5> 
+          <p class="card-text"><%= user.description %></p>
+        </div>
+        <div class="card-footer bg-transparent border border-white pt-0"><i class="fa-regular fa-comment me-3"></i><span class="fs-6 fw-light me-5">50</span><i class="fa-solid fa-retweet me-3"></i><span class="fs-6 fw-light me-5">973</span><i class="fa-regular fa-heart me-3"></i><span class="fs-6 fw-light me-5">400</span></div>
+      </div>
+    </div>
+  </div>
 
 </div>
