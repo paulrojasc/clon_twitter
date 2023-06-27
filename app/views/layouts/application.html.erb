@@ -27,10 +27,10 @@
               <a class="nav-link active" aria-current="page" href=""><i class="fa-solid fa-gear fa-2x"></i></a>
             </li>
           </ul>
-          <form class="d-flex d-lg-none" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <%= form_with url: users_path, class: 'd-flex', method: :get do |form| %>
+            <%= form.text_field :query_text, value: params[:query_text], class: 'form-control me-2', placeholder: 'Buscar en Twitter'  %>
+            <%= form.submit "Buscar", class: 'btn btn-outline-success'%>
+          <%end%>
         </div>
       </div>
     </nav>
