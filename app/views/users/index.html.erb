@@ -4,13 +4,13 @@
 
 <div id="users">
   <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Ver Tweet", user %>
-    </p>
+    <%= render user%>
+    <%= button_to user_path(user), method: :get, class: "btn btn-primary ms-4" do %>
+      Ver Tweet
+    <% end %>
   <% end %>
 </div>
 
-<div class="mt-4">
+<div class="mt-4 pt-4">
 <%==pagy_bootstrap_nav(@pagy)%>
 </div>

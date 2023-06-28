@@ -1,16 +1,17 @@
-<div id="<%= dom_id user %>">
+<div id="<%= dom_id user %>", class="mt-4 pt-1">
   <hr class="mt-5">
-  <div class="card mb-3 border border-white" style="max-width: 540px;">
+  <div class="card mb-3 border border-white tweet_card" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-1">
-        <%= image_tag 'imgperfil.png', class: 'img-fluid rounded-start ms-4 mt-3', size:'40x40'%>
+        <%= image_tag 'imgperfil.png', class: 'img-fluid rounded-start ms-1 mt-3', size:'40x40'%>
       </div>
-      <div class="col-md-11 ps-3">
+      <div class="col-md-11 ps-0">
         <div class="card-body">
-          <h5 class="card-title"><%= user.username %><span class="fs-6 fw-light text-center ms-5">@username -19h</span></h5> 
+          <h5 class="card-title"><%= user.username %><span class="fs-6 fw-light text-center ms-1">@<%= user.username %><%= rand(100) + 1 %> -<%= rand(24) %>h</span></h5> 
           <p class="card-text"><%= user.description %></p>
+          <img class="img-fluid" src="https://loremflickr.com/320/240?random=1">
         </div>
-        <div class="card-footer bg-transparent border border-white pt-0"><i class="fa-regular fa-comment me-3"></i><span class="fs-6 fw-light me-5">50</span><i class="fa-solid fa-retweet me-3"></i><span class="fs-6 fw-light me-5">973</span><i class="fa-regular fa-heart me-3"></i><span class="fs-6 fw-light me-5">400</span></div>
+        <div class="card-footer bg-transparent border border-white pt-0"><i class="fa-regular fa-comment me-1"></i><span class="fs-6 fw-light me-3"><%= rand(1..100) + 1 %></span><i class="fa-solid fa-retweet me-1"></i><span class="fs-6 fw-light me-3"><%= rand(1..100) + 1 %></span><i class="fa-regular fa-heart me-1"></i><span class="fs-6 fw-light me-3"><%= rand(1..100) + 1 %></span><span class="fa-solid fa-arrow-up-from-bracket me-3"></span></div>
       </div>
     </div>
   </div>
